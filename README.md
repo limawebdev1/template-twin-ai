@@ -19,6 +19,12 @@ I am excited to utilize the [Storybrand][def2] framework, which I discovered dur
 
 ![Storybrand-0611](./images/storybrand-0611-1.png)
 
+## SKIPPING (for now) Market Research
+SKIPPING THIS for now - but a brief Google will tell you the pain points - website templates lack SEO, scalability, UX, customization. It's a boilerplate. Tentatively thinking that my target audience is people who use website templates, but also may expand to people who use Upwork etc.
+
+## Technical Architecture
+
+
 ## Resources
 ### Marketing Resources
 - [Storybrand][def2]
