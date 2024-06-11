@@ -1,30 +1,20 @@
 import React, { useState } from 'react';
+import AddUrlInput from './components/AddUrlInput';
+import UrlList from './components/UrlList';
 
-interface AddUrlInputProps {
-  addUrl: (url: string) => void;
-}
+const App: React.FC = () => {
+  const [urls, setUrls] = useState<string[]>([]);
 
-const AddUrlInput: React.FC<AddUrlInputProps> = ({ addUrl }) => {
-  const [url, setUrl] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    addUrl(url);
-    setUrl('');
+  const addUrl = (url: string) => {
+    setUrls((prevUrls) => [...prevUrls, url]);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-        placeholder="Enter URL"
-        required
-      />
-      <button type="submit">+</button>
-    </form>
+    <div>
+      <AddUrlInput addUrl={addUrl} />
+      <UrlList urls={urls} />
+    </div>
   );
 };
 
-export default AddUrlInput;
+export default App;
