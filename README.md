@@ -22,8 +22,15 @@ I am excited to utilize the [Storybrand][def2] framework, which I discovered dur
 ## SKIPPING (for now) Market Research
 SKIPPING THIS for now - but a brief Google will tell you the pain points - website templates lack SEO, scalability, UX, customization. It's a boilerplate. Tentatively thinking that my target audience is people who use website templates, but also may expand to people who use Upwork etc.
 
-## Technical Architecture
+## MVP - June 11th, 2024
+Current scope - 
+* User puts in one to many website URLs
+* User gets back several deployed and responsive websites
 
+The current goal is to test how bad/good we can train the AI model with minimal guidance. Since this is a learning experiment, it'd be good to have a simple goal, with very loose definition, and see how the overall results are.
+
+## Technical Architecture - June 11, 2024
+There are some open questions right now about how I'd even set up the AI model, so I need to do some exploring. However, for the time being, spinning up a simple front-end would get me familiarized with GitHub Copilot and refresh some of my React knowledge! If it ends up needing refactoring, we can start from scratch!
 
 ## Resources
 ### Marketing Resources
