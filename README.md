@@ -17,8 +17,7 @@ Check out my Miro Board [here][def5] to see the journey!
 ## Problem Statement
 I am excited to utilize the [Storybrand][def2] framework, which I discovered during my time at [Immutable][def] while spearheading the go-to-market efforts for portfolio games. This framework empowers me to communicate a clear and impactful message, connect with users, and serves as a valuable reference when developing go-to-market strategies.
 
-### Storybrand Iterations
-* ![Storybrand-0611](./images/storybrand-0611.png)
+![Storybrand-0611](./images/storybrand-0611-1.png)
 
 ## Resources
 ### Marketing Resources
