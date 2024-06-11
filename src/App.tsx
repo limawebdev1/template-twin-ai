@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import GlobalStyles from './GlobalStyles';
 import AddUrlInput from './components/AddUrlInput';
 import UrlList from './components/UrlList';
+import Header from './components/Header';
 
 const App: React.FC = () => {
   const [urls, setUrls] = useState<string[]>([]);
@@ -11,6 +13,8 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <GlobalStyles />
+      <Header />
       <AddUrlInput addUrl={addUrl} />
       <UrlList urls={urls} />
     </div>

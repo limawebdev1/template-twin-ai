@@ -1,4 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const ListItem = styled.li`
+  padding: 0.5em;
+  border-bottom: 1px solid ${props => props.theme.secondary};
+`;
 
 interface UrlListProps {
   urls: string[];
@@ -6,11 +18,11 @@ interface UrlListProps {
 
 const UrlList: React.FC<UrlListProps> = ({ urls }) => {
   return (
-    <ul>
+    <List>
       {urls.map((url, index) => (
-        <li key={index}>{url}</li>
+        <ListItem key={index}>{url}</ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
