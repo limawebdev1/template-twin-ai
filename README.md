@@ -11,3 +11,20 @@ The project will:
 - Define a technical architecture to support a public-facing proof-of-concept
 - Implement a custom AI model
 - Reflect on the final proof-of-concept
+
+## Problem Statement
+I am excited to utilize the [Storybrand][def2] framework, which I discovered during my time at [Immutable][def] while spearheading the go-to-market efforts for portfolio games. This framework empowers me to communicate a clear and impactful message, connect with users, and serves as a valuable reference when developing go-to-market strategies.
+
+## Resources That Helped Me
+### Marketing Resources
+- [Storybrand][def2]
+### Product Resources
+
+### AI Resources
+- [Training Your Own AI Model Is Not As You (Probably) Think][def4]
+- [How To Build AI Products That Don't Flog][def3]
+
+[def]: https://www.immutable.com/
+[def2]: https://storybrand.com/
+[def3]: https://www.youtube.com/watch?v=V3uiKM2TXNY
+[def4]: https://www.youtube.com/watch?v=fCUkvL0mbxI
