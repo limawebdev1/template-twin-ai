@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Input = styled.input`
+const Input = styled.input<{ hasError: boolean }>`
   padding: 0.5em;
   margin: 0.5em;
   color: black;
   background: papayawhip;
-  border: none;
+  border: ${props => props.hasError ? '1px solid red' : 'none'};
   border-radius: 3px;
   flex-grow: 1;
 `;
@@ -27,9 +27,9 @@ const Button = styled.button`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 50vh; // make the form take up 50% of the viewport height
+  margin: 0 auto; // adjust the vertical margin as needed
+  max-width: 600px;
 `;
 
 const InputGroup = styled.div`
@@ -38,17 +38,48 @@ const InputGroup = styled.div`
   max-width: 600px;
 `;
 
+const Error = styled.p`
+  color: red;
+  margin-left: 10px;
+  font-family: Tahoma, sans-serif;
+`;
+
+function isValidUrl(url: string): boolean {
+  const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name and extension
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?'+ // port
+    '(\\/[-a-z\\d%_.~+:@=]*)*'+ // path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return !!pattern.test(url);
+}
+
 interface AddUrlInputProps {
   addUrl: (url: string) => void;
 }
 
 const AddUrlInput: React.FC<AddUrlInputProps> = ({ addUrl }) => {
   const [inputValue, setInputValue] = useState('');
+  const [error, setError] = useState('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newUrl = event.target.value;
+    setInputValue(newUrl);
+
+    if (!isValidUrl(newUrl)) {
+      setError("Please enter a valid URL.");
+    } else {
+      setError("");
+    }
+  };
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    addUrl(inputValue);
-    setInputValue('');
+    if (isValidUrl(inputValue)) {
+      addUrl(inputValue);
+      setInputValue('');
+    }
   };
 
   return (
@@ -57,12 +88,14 @@ const AddUrlInput: React.FC<AddUrlInputProps> = ({ addUrl }) => {
         <Input
           type="text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Enter URL"
+          onChange={handleInputChange}
+          placeholder="Enter a URL of a website you like..."
           required
+          hasError={!!error}
         />
         <Button type="submit">+</Button>
       </InputGroup>
+      {error && <Error>{error}</Error>}
     </Form>
   );
 };
