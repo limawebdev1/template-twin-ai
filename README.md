@@ -12,7 +12,7 @@ The project will:
 - Implement a custom AI model
 - Reflect on the final proof-of-concept
 
-Check out my Miro Board [here][def5] to see the journey!
+Check out my Miro Board [here][def5] and my ChatGPT History [here][def6] to see the journey!
 
 ## Problem Statement
 I am excited to utilize the [Storybrand][def2] framework, which I discovered during my time at [Immutable][def] while spearheading the go-to-market efforts for portfolio games. This framework empowers me to communicate a clear and impactful message, connect with users, and serves as a valuable reference when developing go-to-market strategies.
@@ -24,13 +24,18 @@ SKIPPING THIS for now - but a brief Google will tell you the pain points - websi
 
 ## MVP - June 11th, 2024
 Current scope - 
-* User puts in one to many website URLs
-* User gets back several deployed and responsive websites
+- User puts in one to many website URLs
+- User gets back ONE deployed and responsive website
 
 The current goal is to test how bad/good we can train the AI model with minimal guidance. Since this is a learning experiment, it'd be good to have a simple goal, with very loose definition, and see how the overall results are.
 
-## Technical Architecture - June 11, 2024
-There are some open questions right now about how I'd even set up the AI model, so I need to do some exploring. However, for the time being, spinning up a simple front-end would get me familiarized with GitHub Copilot and refresh some of my React knowledge! If it ends up needing refactoring, we can start from scratch!
+## Technical Architecture - June 13, 2024
+Attached my current application structure. There needs to be some discovery - 
+- There seem to be existing AI models (ResNet, VGG) that will extract features from website screenshots.
+-  ChatGPT (the LLM) has been my main assist in project managing my approach to this project, and it suggests I need training and validation sets, but I don't know what that means.
+-  Lastly, my preliminary thoughts are that it would be useful to have the user train the model as well, not just the creator, but I'm wondering whether this would be a good user experience.
+    - This question should be kept in mind when defining inputs/outputs for the various services.
+![AppStructure-0613](./images/app-structure-06-13.png)
 
 ## Resources
 ### Marketing Resources
@@ -46,3 +51,4 @@ There are some open questions right now about how I'd even set up the AI model, 
 [def3]: https://www.youtube.com/watch?v=V3uiKM2TXNY
 [def4]: https://www.youtube.com/watch?v=fCUkvL0mbxI
 [def5]: https://miro.com/app/board/uXjVK9fWzuk=/?share_link_id=99768542151
+[def6]: https://chatgpt.com/share/4b7240d1-6e69-41a7-adcb-21e025cc6a96
