@@ -46,6 +46,7 @@ Attached my current application structure. There needs to be some discovery -
 - [Training Your Own AI Model Is Not As You (Probably) Think][def4]
 - [How To Build AI Products That Don't Flog][def3]
 - [The Importance of Data Splitting][def7]
+- [Training vs Testing vs Validation Sets][def8]
 
 [def]: https://www.immutable.com/
 [def2]: https://storybrand.com/
@@ -54,3 +55,4 @@ Attached my current application structure. There needs to be some discovery -
 [def5]: https://miro.com/app/board/uXjVK9fWzuk=/?share_link_id=99768542151
 [def6]: https://chatgpt.com/share/4b7240d1-6e69-41a7-adcb-21e025cc6a96
 [def7]: https://mlu-explain.github.io/train-test-validation/
+[def8]: https://www.geeksforgeeks.org/training-vs-testing-vs-validation-sets/
