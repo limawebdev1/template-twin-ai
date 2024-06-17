@@ -22,7 +22,7 @@ I am excited to utilize the [Storybrand][def2] framework, which I discovered dur
 ## SKIPPING (for now) Market Research
 SKIPPING THIS for now - but a brief Google will tell you the pain points - website templates lack SEO, scalability, UX, customization. It's a boilerplate. Tentatively thinking that my target audience is people who use website templates, but also may expand to people who use Upwork etc.
 
-## MVP - June 11th, 2024
+## MVP - June 13th, 2024
 Current scope - 
 - User puts in one to many website URLs
 - User gets back ONE deployed and responsive website
